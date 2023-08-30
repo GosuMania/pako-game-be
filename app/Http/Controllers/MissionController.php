@@ -61,15 +61,15 @@ class MissionController extends Controller
         }
 
         if($request->selfieFesteggiato != null) {
-            $points = $points + 25;
+            $points = $points + 30;
         }
 
         if($request->selfieAngolo != null) {
-            $points = $points + 25;
+            $points = $points + 30;
         }
 
         if($request->videoBrindisi != null) {
-            $points = $points + 30;
+            $points = $points + 50;
         }
 
         if($request->dedica != null && $request->dedica != '') {

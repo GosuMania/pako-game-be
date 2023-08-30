@@ -15,10 +15,10 @@ use DB;
 
 class UserController extends Controller
 {
-
     public function getAll()
     {
-        return UserResource::collection(User::orderBy('punteggio', 'DESC')->orderBy('date', 'ASC')->get());
+        return UserResource::collection(User::orderBy('punteggio', 'DESC')->join('missions', 'missions.id', '=', 'users.id_mission')
+            ->orderBy('missions.date', 'ASC')->get());
     }
 
     public function signInOrSignUp(Request $request)
