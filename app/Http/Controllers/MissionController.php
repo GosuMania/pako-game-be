@@ -37,12 +37,13 @@ class MissionController extends Controller
             [
                 'id_utente' => $request->idUtente,
                 'parola_cruciverba' => $request->parolaCruciverba,
-                'selfie_sposa' => $request->selfieSposa,
-                'selfie_sposo' => $request->selfieSposo,
+                'selfie_festeggiato' => $request->selfieFesteggiato,
+                'selfie_angolo' => $request->selfieAngolo,
                 'brindisi' => $request->brindisi,
                 'video_brindisi' => $request->videoBrindisi,
-                'parola_jenga' => $request->parolaJenga,
+                'dedica' => $request->dedica,
                 'indovinello' => $request->indovinello,
+                'indovinello_due' => $request->indovinelloDue,
                 'punteggio' => $points,
                 'date' => Carbon::now()
             ]
@@ -55,15 +56,15 @@ class MissionController extends Controller
 
     public function calcPoints(Request $request) {
         $points = 0;
-        if(strtolower($request->parolaCruciverba) == 'complicità' || strtolower($request->parolaCruciverba) == 'complicita') {
+        if(strtolower($request->parolaCruciverba) == 'arcobaleno') {
             $points = $points + 20;
         }
 
-        if($request->selfieSposa != null) {
+        if($request->selfieFesteggiato != null) {
             $points = $points + 25;
         }
 
-        if($request->selfieSposo != null) {
+        if($request->selfieAngolo != null) {
             $points = $points + 25;
         }
 
@@ -71,11 +72,15 @@ class MissionController extends Controller
             $points = $points + 30;
         }
 
-        if(strtolower($request->parolaJenga) == '110623') {
+        if($request->dedica != null && $request->dedica != '') {
             $points = $points + 20;
         }
 
-        if(strtolower($request->indovinello) == 'burraco' || strtolower($request->indovinello) == 'buracco') {
+        if(strtolower($request->indovinello) == 'campagna') {
+            $points = $points + 20;
+        }
+
+        if(strtolower($request->indovinelloDue) == '5102005') {
             $points = $points + 20;
         }
 

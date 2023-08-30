@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('missions', function (Blueprint $table) {
             $table->id();
             $table->string('parola_cruciverba')->nullable();
-            $table->string('selfie_sposa')->nullable();
-            $table->string('selfie_sposo')->nullable();
+            $table->string('selfie_festeggiato')->nullable();
+            $table->string('selfie_angolo')->nullable();
             $table->boolean('brindisi')->default(false);
             $table->string('video_brindisi')->nullable();
             $table->string('parola_jenga')->nullable();
