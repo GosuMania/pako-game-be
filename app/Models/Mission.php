@@ -13,12 +13,13 @@ class Mission extends Model
 
     protected $fillable = [
         'parola_cruciverba',
-        'selfie_sposa',
-        'selfie_sposo',
+        'selfie_festeggiato',
+        'selfie_angolo',
         'brindisi',
         'video_brindisi',
-        'parola_jenga',
+        'dedica',
         'indovinello',
+        'indovinello_due',
         'punteggio',
         'date'
     ];

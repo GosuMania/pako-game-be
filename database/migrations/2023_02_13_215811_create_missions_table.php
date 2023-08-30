@@ -20,9 +20,10 @@ return new class extends Migration
             $table->string('selfie_angolo')->nullable();
             $table->boolean('brindisi')->default(false);
             $table->string('video_brindisi')->nullable();
-            $table->string('parola_jenga')->nullable();
+            $table->string('dedica')->nullable();
             $table->integer('punteggio')->default(0);
             $table->string('indovinello')->nullable();
+            $table->string('indovinelloDue')->nullable();
             $table->dateTime('date');
         });
 

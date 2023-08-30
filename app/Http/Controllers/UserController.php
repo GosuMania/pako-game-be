@@ -33,12 +33,13 @@ class UserController extends Controller
             $missionNew = Mission::create(
                 [
                     'parola_cruciverba' => null,
-                    'selfie_sposa' => null,
-                    'selfie_sposo' => null,
+                    'selfie_festeggiato' => null,
+                    'selfie_angolo' => null,
                     'brindisi' => false,
                     'video_brindisi' => null,
-                    'parola_jenga' => null,
+                    'dedica' => null,
                     'indovinello' => null,
+                    'indovinello_due' => null,
                     'punteggio' => 0,
                     'date' => Carbon::now()
                 ]

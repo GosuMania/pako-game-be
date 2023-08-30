@@ -17,12 +17,13 @@ class Mission extends JsonResource
         return [
             'id' => $this->id,
             'parolaCruciverba' => $this->parola_cruciverba,
-            'selfieSposa' => $this->selfie_sposa,
-            'selfieSposo' => $this->selfie_sposo,
+            'selfieFesteggiato' => $this->selfie_festeggiato,
+            'selfieAngolo' => $this->selfie_angolo,
             'brindisi' => $this->brindisi,
             'videoBrindisi' => $this->video_brindisi,
-            'parolaJenga' => $this->parola_jenga,
+            'dedica' => $this->dedica,
             'indovinello' => $this->indovinello,
+            'indovinelloDue' => $this->indovinello_due,
             'punteggio' => $this->punteggio,
             'date' => $this->date,
         ];
