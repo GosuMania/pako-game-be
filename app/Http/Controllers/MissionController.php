@@ -73,7 +73,7 @@ class MissionController extends Controller
         }
 
         if($request->dedica != null && $request->dedica != '') {
-            $points = $points + 20;
+            $points = $points + 30;
         }
 
         if(strtolower($request->indovinello) == 'campagna') {
