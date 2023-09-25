@@ -56,7 +56,7 @@ class MissionController extends Controller
 
     public function calcPoints(Request $request) {
         $points = 0;
-        if(strtolower($request->parolaCruciverba) == 'arcobaleno') {
+        if(strtolower($request->parolaCruciverba) == 'rainbow') {
             $points = $points + 20;
         }
 
